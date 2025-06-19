@@ -1,0 +1,11 @@
+services:
+  stylus-dev:
+    image: arbitrum-stylus-dev:latest
+    container_name: stylus-dev
+    ports:
+      - "8547:8547"
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    entrypoint: ["/usr/local/bin/run-dev-node.sh", "--stylus"]
+    privileged: true
