@@ -30,11 +30,17 @@ docker pull hummusonrails/arbitrum-stylus-dev:latest
 
 ### 2. Launch the Dev Environment
 
+> [!TIP]
+> Any changes you make to your local files are instantly available inside the container thanks to the mounted volume.
+
 ```sh
 docker-compose up -d
 ```
 
 This starts a local Nitro devnet at [`http://localhost:8547`](http://localhost:8547) with the full Stylus toolchain installed.
+
+> [!TIP]
+> Use `cargo-stylus` directly from the command line inside the container, for example: `cargo-stylus build`.
 
 ## Toolchain Summary
 
@@ -76,10 +82,6 @@ You can use the Stylus Docker image in two ways:
     cd /workspace  # already the working directory
     cargo-stylus build
     ```
-
-> [!TIP]
-> Any changes you make to your local files are instantly available inside the container thanks to the mounted volume.
-
 </details>
 
 <details>
@@ -98,9 +100,6 @@ You can use the Stylus Docker image in two ways:
     ```
 
 4. Your project directory is mounted into <code>/workspace</code> in the container. Run your Stylus build commands (such as <code>cargo stylus build</code>) from there.
-
-> [!TIP]
-> Use `cargo-stylus` directly from the command line inside the container, for example: `cargo-stylus build`.
 
 </details>
 
